@@ -6,3 +6,5 @@ page_template = "blog-page.html"
 insert_anchor_links = "left"
 generate_feed = true
 +++
+
+_Coming soon_

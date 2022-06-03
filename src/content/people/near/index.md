@@ -1,0 +1,12 @@
++++
+[extra]
+name = "Joe Near"
+lab = "PLAID"
+lab_url = "https://plaid.w3.uvm.edu"
+role = "faculty"
+title = "affiliate"
+interests = "Differential Privacy, Multiparty Computation."
+website = "https://uvm.edu/~jnear"
+institution1 = "University of Vermont"
+institution2 = "College of Engineering and Mathematical Sciences (CEMS)"
++++

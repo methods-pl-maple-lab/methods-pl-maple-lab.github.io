@@ -10,11 +10,11 @@
     <link 
         rel="icon"
         type="image/ico"
-        href="{{ config.base_url }}/img/logo.png">
+        href="https:&#x2F;&#x2F;uvm.edu&#x2F;~maple/img/logo.png">
 
     <link rel="stylesheet"
         type="text/css"
-        href="{{ config.base_url }}/css/style.css">
+        href="https:&#x2F;&#x2F;uvm.edu&#x2F;~maple/css/style.css">
 
      <title>M&PLE: Methods and Programming Languages for Everyone!</title>   
 </head>
@@ -49,8 +49,15 @@
                 </ul>
             </div>
             <div class="col-sm">
-                    {% block content %}
-                    {% endblock content %}
+                    
+    <p>You can contact us via <a href="mailto:maple-lab@uvm.edu">email</a>, <a href="https://twitter.com/uvm-maple-lab">Twitter</a> direct message, or the form below:</p>
+<form>      
+  <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+  <input name="email" type="text" class="feedback-input" placeholder="Email" />
+  <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+  <input type="submit" value="SUBMIT"/>
+</form>
+
             </div>
             <div class="col-sm menu">
                 <a class="twitter-timeline"

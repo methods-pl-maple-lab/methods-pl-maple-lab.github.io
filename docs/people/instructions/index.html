@@ -10,11 +10,11 @@
     <link 
         rel="icon"
         type="image/ico"
-        href="{{ config.base_url }}/img/logo.png">
+        href="https:&#x2F;&#x2F;uvm.edu&#x2F;~maple/img/logo.png">
 
     <link rel="stylesheet"
         type="text/css"
-        href="{{ config.base_url }}/css/style.css">
+        href="https:&#x2F;&#x2F;uvm.edu&#x2F;~maple/css/style.css">
 
      <title>M&PLE: Methods and Programming Languages for Everyone!</title>   
 </head>
@@ -49,8 +49,26 @@
                 </ul>
             </div>
             <div class="col-sm">
-                    {% block content %}
-                    {% endblock content %}
+                    
+    <h1 id="how-to-add-yourself-to-people">How to add yourself to People</h1>
+<p>Adding yourself to the people page is a simple matter of: </p>
+<ol>
+<li>Forking <a href="https://github.com/uvm-maple/uvm-maple.github.io">this repository</a>,</li>
+<li>Adding the appropriate folders and files to your fork,</li>
+<li>Editing the files to reflect the information you want in them, and</li>
+<li>Sending a pull request to the website to build and merge.</li>
+</ol>
+<p>You can edit your fork directly on GitHub, or you can clone the forked repository to your local machine. The instructions below include information for either approach. </p>
+<div class="long">
+<ol>
+<li>Create a folder under people using your surname (if you have more than one, use underscores for spaces). <br/><small> For example, if we assume you are working from the top level of this repository on a Mac and your name is Xena Warrior Princess, running <br/><code>mkdir src/content/people/warrior_princess</code><br/> should do the trick.</small><br/> You can also manually </li>
+<li>Add a headshot named <code>headshot.jpg</code> to the folder you just created. <em>The file must have the name <code>headshot.jpg</code> or it will not render</em>. </li>
+<li>Copy this file into your new people directory as <code>index.md</code>, e.g., <code>cp src/content/people/instructions.md src/content/people/warror_princess/index.md</code>.</li>
+<li>Edit the front matter of this file (i.e., the stuff between the two <code>+++</code> strings) as appropriate. This file includes all of the possible information you can include. If you do not want to include a piece of information, you should delete that entry. For example, you may not have any publicly available publications yet. </li>
+</ol>
+</div>
+
+
             </div>
             <div class="col-sm menu">
                 <a class="twitter-timeline"

@@ -1,0 +1,125 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+<h1>Primary Faculty</h1>
+
+<table>
+    <!-- list director first -->
+    <tr><td class="left">
+{% for person in section.pages %}
+  {% if person.extra and person.extra.title and person.extra.title == "director" %}
+        <div class="person-panel">
+            <div class="person-content">
+            <table>
+            <tr><td><a href="{{ person.extra.website }}" class="headshot"><img src="{{ config.base_url }}/people/{{ person.slug }}/headshot.jpg" class="headshot"/></a>
+                </td>
+                <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name }}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span> ({{person.extra.title}})<br/>
+                    {{ person.extra.institution1 }}<br/>
+                    {% if person.extra.institution2 %} 
+                    <small>{{ person.extra.institution2 }}</small>
+                    {% endif %}
+                </td>
+            </tr>
+            </table>
+            <br/>
+            <b>Interests: </b>{{ person.extra.interests }}&nbsp;
+        </div>
+</div>
+</td>
+{% endif %}
+{% endfor %}
+<!-- now rotate through affiliated faculty -->
+{% set left = false %}
+{% for person in section.pages %}
+    {% if person.extra and person.extra.role == "faculty" and person.extra.title != "director" %}
+    {% if left %}
+    </tr><tr><td class="left">
+    <div class="person-panel">
+    {% set left = false %}
+    {% else %} 
+    <td class="right">
+    <div class="person-panel">
+    {% set left = true %}
+    {% endif %}    
+        <div class="person-content">
+            <table>
+                <tr><td>
+                    <a href="{{ person.extra.website }}" class="headshot"><img src="{{ config.base_url }}/people/{{ person.slug }}/headshot.jpg" 
+                                                                               class="headshot"
+                                                                               onerror="this.onerror=null; this.src='/img/trike.png'"
+                                                                               /></a>
+                    </td>
+                    <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name }}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span>
+                        {% if person.extra.title %}({{person.extra.title}}){% endif %}<br/>
+                        {{ person.extra.institution1 }}<br/>
+                        {% if person.extra.institution2 %} 
+                        <small>{{ person.extra.institution2 }}</small>
+                        {% endif %}
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <b>Interests: </b>{{ person.extra.interests }}&nbsp;
+            {% if person.extra.social %} 
+            <div><a href="{{ person.extra.social }}" style="text-align:center">&#xf0c0;</a></div>
+            {% endif %}    
+        </div>
+    </div></td>
+    {% endif %}
+{% endfor %}
+{% if left %}</tr>{% endif %}
+    </table>
+
+{% for role in ["member", "collaborator"] %} 
+<br/>
+{% set_global left = true %}
+<!-- set the header -->
+{% if role == "member" %}
+<h1>Members</h1>
+{% elif role == "collaborator" %} 
+<h1>Collaborators</h1>
+{% endif %}
+
+<table>
+    <!-- loop through remaining people; order doesn't matter now (although maybe later we want to list by seniority? )-->
+{% for person in section.pages %}
+  {% if person.extra and person.extra.role == role %}
+    {% if left %} <tr><td class="left"> {% else %}<td class="right">{% endif %}
+    <div class="person-panel">
+        <div class="person-content">
+            <table>
+                <tr><td>
+                    <a href="{{ person.extra.website }}" class="headshot"><img src="{{ config.base_url }}/people/{{ person.slug }}/headshot.jpg" 
+                                                                               class="headshot"
+                                                                               onerror="this.onerror=null; this.src='/img/trike.png'"
+                                                                               /></a>
+                    </td>
+                    <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name }}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span><br/>
+                        {{ person.extra.institution1 }}<br/>
+                        {% if person.extra.institution2 %} 
+                        <small>{{ person.extra.institution2 }}</small>
+                        {% endif %}
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            {% if person.extra.interests %}
+            <b>Interests: </b>{{ person.extra.interests }}
+            {% endif %}
+            {% if person.extra.service %} 
+            <b>Lab Service:</b>{{ person.extra.service}}
+            {% endif %}
+            {% if person.extra.pub_title %} 
+            <b>Representative Publication:</b>&nbsp;<a href="{{ person.extra.pub_url }}">{{ person.extra.pub_title }}</a>
+            {% endif %}
+        </div></div></td>
+    {% if left %}{% set_global left = false %}{% else %}{% set_global left = true %}</tr>{% endif %}
+  {% endif %}
+{% endfor %}
+</table>
+{% endfor %}
+
+
+
+{% endblock content %}
