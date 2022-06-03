@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+    margin:0;
+}
+
+.banner {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.banner > img {
+    max-height: 160px;
+    width:auto;
+}
+
+.menu {
+    max-width : 20%;
+    height: 100%;
+}
+
+.content {
+    max-width: 80%;
+    position:relative;
+}
+
+.image-content {
+    max-width: 100%;
+    border-radius: 25px;
+    margin-bottom: 50px;
+}
+
+.person > a {
+    color: green;
+}
+
+.event > a {
+    color: coral;
+}
+
+.group > a {
+    color: burlywood;
+}
+
+.pub > a {
+    color:crimson;
+}
+
+li { 
+    margin-bottom: 2px;
+}
+
+.long > ol > li { 
+    margin-bottom: 15px;
+}
+
+h1 { 
+ font-size: 28pt;   
+}
+
+h2 { 
+    font-size: 24pt;
+}
+
+h3 { 
+    font-size: 20pt;
+}
+
+td.left { 
+    padding-right: 5px;
+    width: 50%;
+}
+
+td.right { 
+    padding-left: 5px;
+    width: 50%;
+}
+
+.person-panel {
+    min-height: 228px;
+    max-height: fit-content;
+    padding-bottom: 25px;
+    border-radius: 15px 15px;
+    border-style: solid;
+    margin-top: 25px;
+    background-color:aliceblue;
+}
+
+.person-content {
+    font-size: smaller;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px 10px 0px 15px;
+    color:black;
+    height: max-content;
+}
+
+
+img.headshot {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: antiquewhite;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color:chocolate;
+    height: 50px;
+    margin-top: -50px;
+    border-top: solid;
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.footer > a {
+    color: greenyellow;
+}
+
+.my-content {
+    min-height: 80%;
+}
+
+.my-content-inside {
+    padding: 20px;
+    padding-bottom: 50px;
+}
