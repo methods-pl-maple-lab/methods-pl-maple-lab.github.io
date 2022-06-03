@@ -2,7 +2,7 @@
 [extra]
 name = "Ratang Sedimo"
 lab = "MaPLE"
-lab_url = "https://uvm.edu/~maple"
+lab_url = "https://uvm-maple.github.io/"
 role = "member"
 website = "https://uvm.edu/~rsedimo"
 institution1 = "University of Vermont"

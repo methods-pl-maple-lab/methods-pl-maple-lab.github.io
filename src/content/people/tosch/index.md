@@ -2,7 +2,7 @@
 [extra]
 name = "Emma Tosch"
 lab = "MaPLE"
-lab_url = "https://uvm.ed/~maple"
+lab_url = "https:uvm-maple-lab.github.io"
 role = "faculty"
 title = "director"
 interests = "Applied PL in whatever new areas my students are most enthusiastic about!"

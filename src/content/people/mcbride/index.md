@@ -2,7 +2,7 @@
 [extra]
 name = "Erin McBride"
 lab = "MaPLE"
-lab_url = "https://uvm.edu/~maple"
+lab_url = "https://uvm-maple.github.io/"
 role = "member"
 website = ""
 institution1 = "University of Vermont"
