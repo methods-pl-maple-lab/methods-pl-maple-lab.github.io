@@ -1,1 +1,52 @@
 {% extends "page.html" %}
+
+{% block content %}
+
+<h1 class="title">
+    {{ section.title }}
+</h1>
+  <div class="posts">
+    {% for page in paginator.pages %}
+        <article>
+        <div class="post">
+            <h4><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
+            <strong>{{ page.date }}</strong>
+            {% set_global authors = page.extra.authors %}
+            {% set section = get_section(path="people/_index.md") %}
+            {% for author in authors %}
+                {% for person in section.pages %} 
+                    {% if person.slug == author %}
+                        &nbsp;&middot;&nbsp;
+                        <a href="{{ person.extra.website }}">{{person.extra.name}}</a>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            <div class="post__summary">
+                {% if page.extra and page.extra.preview %}
+                    <img src="{{ page.permalink }}/{{ page.extra.preview }}" style="width:64px;"/>
+                {% endif %}
+                {{ page.summary | safe }}
+            </div>
+            <div class="read-more">
+                <a href="{{ page.permalink }}">Read more...</a>
+            </div>
+        </div>
+        </article>
+    {% endfor %}
+</div>
+
+<!-- for some reason this isn't working -->
+
+<div class="text-center">
+    {% if paginator.previous %}
+        <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+    {% endif %}
+    {% if paginator.previous and paginator.next %}
+        &middot;&middot;&middot;
+    {% endif %}
+    {% if paginator.next %}
+        <a class="next" href="{{ paginator.next }}">Next ›</a>
+    {% endif %}
+</div>
+
+{% endblock content %}
