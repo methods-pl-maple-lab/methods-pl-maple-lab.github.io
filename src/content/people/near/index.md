@@ -9,4 +9,5 @@ interests = "Differential Privacy, Applied Crypto, Multiparty Computation, Progr
 website = "https://uvm.edu/~jnear"
 institution1 = "University of Vermont"
 institution2 = "College of Engineering and Mathematical Sciences (CEMS)"
+weight = 2
 +++

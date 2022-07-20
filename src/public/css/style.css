@@ -3,6 +3,18 @@ html, body {
     margin:0;
 }
 
+a {
+    color:cadetblue;
+}
+
+.nav-link {
+    color:cadetblue;
+}
+
+.data-link-color {
+    color: cadetblue;
+}
+
 .banner {
     text-align: center;
     width: 100%;
@@ -126,6 +138,33 @@ img.headshot {
 }
 
 .my-content-inside {
-    padding: 20px;
+    padding-left: 0px;
     padding-bottom: 50px;
+}
+
+.thumbnail {
+    max-width: 128px;
+    float: left;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.post_summary {
+    padding-top: 10px;
+}
+
+.read-more {
+    color:blueviolet;
+}
+
+.post {
+    padding-bottom: 25px;
+}
+
+.tweet {
+    visibility: hidden;
+}
+
+img.post {
+    width: 80%;
 }

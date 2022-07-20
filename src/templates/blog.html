@@ -1,15 +1,12 @@
 {% extends "page.html" %}
 
 {% block content %}
-
-<h1 class="title">
-    {{ section.title }}
-</h1>
   <div class="posts">
     {% for page in paginator.pages %}
         <article>
         <div class="post">
-            <h4><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
+            <h5>{{ page.title }}</h5>
+            {% if page.extra.subtitle %}<h6><i>{{ page.extra.subtitle }}</i></h6>{% endif %}
             <strong>{{ page.date }}</strong>
             {% set_global authors = page.extra.authors %}
             {% set section = get_section(path="people/_index.md") %}
@@ -21,11 +18,10 @@
                     {% endif %}
                 {% endfor %}
             {% endfor %}
-            <div class="post__summary">
+            <div class="post_summary">
                 {% if page.extra and page.extra.preview %}
-                    <img src="{{ page.permalink }}/{{ page.extra.preview }}" style="width:64px;"/>
-                {% endif %}
-                {{ page.summary | safe }}
+                    <img src="{{ page.permalink }}/{{ page.extra.preview }}" class="thumbnail"/>
+                {% endif %} {{ page.summary | safe }}
             </div>
             <div class="read-more">
                 <a href="{{ page.permalink }}">Read more...</a>

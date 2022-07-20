@@ -8,4 +8,5 @@ website = "https://ivyclare.github.io/"
 institution1 = "University of Vermont"
 institution2 = "CEMS"
 interests = "Data privacy, machine learning, fairness"
+weight = 100
 +++

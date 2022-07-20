@@ -3,9 +3,10 @@
 {% block logo %}{% endblock %}
 
 {% block content %}
-<h3 class="title">
+<h5 class="title">
   {{ page.title }}
-</h3>
+</h5>
+{% if page.extra.subtitle %}<h6><i>{{ page.extra.subtitle }}</i></h6>{% endif %}
 <p class="subtitle">
   <strong>{{ page.date }}</strong>
   {% set_global authors = page.extra.authors %}

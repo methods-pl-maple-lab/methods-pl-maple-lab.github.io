@@ -8,4 +8,5 @@ website = "https://uvm.edu/~mpbates"
 institution1 = "University of Vermont"
 institution2 = "CEMS"
 interests = "programming languge principles, type theory, programming systems"
+weight = 100
 +++

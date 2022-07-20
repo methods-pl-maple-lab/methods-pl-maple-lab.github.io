@@ -12,6 +12,7 @@ institution1 = "Your primary institution, e.g., university, company, etc."
 institution2 = "Your secondary institution or a subsidiary of the instituiton (e.g., a college within a university), if relevant"
 pub_title = "For students, pick one representative publication of yours to advertise"
 pub_url = "URL for the publication"
+weight = 100
 +++
 
 # How to add yourself to People

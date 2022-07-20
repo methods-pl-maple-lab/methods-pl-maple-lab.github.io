@@ -10,6 +10,13 @@
         <loc>https://uvm-maple.github.io/blog/</loc>
     </url>
     <url>
+        <loc>https://uvm-maple.github.io/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://uvm-maple.github.io/blog/what-is-pl/</loc>
+        <lastmod>2022-07-05</lastmod>
+    </url>
+    <url>
         <loc>https://uvm-maple.github.io/calendar/</loc>
     </url>
     <url>
@@ -59,5 +66,8 @@
     </url>
     <url>
         <loc>https://uvm-maple.github.io/recruiting/</loc>
+    </url>
+    <url>
+        <loc>https://uvm-maple.github.io/resources/</loc>
     </url>
 </urlset>

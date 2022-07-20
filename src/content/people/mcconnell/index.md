@@ -8,4 +8,5 @@ website = "https://uvm.edu/~mvmcconn"
 institution1 = "University of Vermont"
 institution2 = "College of Engineering and Mathematical Sciences (CEMS)"
 interests = "Privacy, anonymity, data collection"
+weight = 100
 +++
