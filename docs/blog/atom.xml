@@ -4,12 +4,12 @@
 	<link href="https://uvm-maple.github.io/blog/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://uvm-maple.github.io/blog/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-05T00:00:00+00:00</updated>
+	<updated>2022-07-20T00:00:00+00:00</updated>
 	<id>https://uvm-maple.github.io/blog/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Answering the important questions</title>
-		<published>2022-07-05T00:00:00+00:00</published>
-		<updated>2022-07-05T00:00:00+00:00</updated>
+		<published>2022-07-20T00:00:00+00:00</published>
+		<updated>2022-07-20T00:00:00+00:00</updated>
 		<link href="https://uvm-maple.github.io/blog/what-is-pl/" type="text/html"/>
 		<id>https://uvm-maple.github.io/blog/what-is-pl/</id>
 		<content type="html">&lt;p&gt;Here in the MaPLE lab, we treat the techniques students cultivate in their &lt;em&gt;programming systems&lt;&#x2F;em&gt; classes as general methods for answering a broad range of research questions that arise in and around software when it is used in nontraditional ways.  As a result, students without formal training in the techniques we use often ask: &amp;quot;What is PL?,&amp;quot; whereas those with training often ask: &amp;quot;How is what you do PL?&amp;quot; &lt;&#x2F;p&gt;
