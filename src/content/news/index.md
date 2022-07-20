@@ -2,6 +2,7 @@
 template = "page.html"
 +++
 
+* *June 2022* [Formal Methods in Software Support for Sound Experimentation](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2220422&HistoricalAwards=false) funded by the NSF!
 * *June 2022* MaPLE/<span class="group">[PLAID](https://plaid.w3.uvm.edu)<span> student <span class="person">[Mako Bates](https://uvm.edu/~mpbates)</span> attends <span class="event">[OPLSS 2022](https://www.cs.uoregon.edu/research/summerschool/summer22/)</span>.
 * *June 2022* MaPLE PhD student <span class="person">[Ratang Sedimo](https://uvm.edu/~rsedimo)<span> attends <span class="event">[PLMW](https://pldi22.sigplan.org/track/PLMW-PLDI-2022)@[PLDI2022](https://pldi22.sigplan.org)<span>.
 * *June 2022* <span class="group">[CCSP](https://compsec.w3.uvm.edu)</span> students <span class="person">[Mako Bates](https://uvm.edu/~mpbates)</span>, <span class="person">[Michael McConnell](https://uvm.edu/~mvmcconn)</span>, <span class="person">[Ivoline Ngong](https://ivyclare.github.io)</span> and <span class="person">[Ratang Sedimo](https://uvm.edu/~rsedimo)</span> attend the <span class="event">[differential privacy summer school](https://bostondataprivacy.github.io/summerschool/)</span> at <span class="group">[Boston University](http://bu.edu)</span>.
