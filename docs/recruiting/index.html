@@ -4,8 +4,10 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    
 
     <link 
         rel="icon"
@@ -18,64 +20,102 @@
 
      <title>M&PLE: Methods and Programming Languages for Everyone!</title>   
 </head>
+
 <body>    
-    <a href="/"><div class="banner">
-        <img src="/img/banner.png" class="banner">
-    </div></a>
+    <!-- had some stuff that would need either JS or SASS to do. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <header class="header">
+        <div class="mobile-header row">
+            <!-- <a href="#"><img src="/img/logo.png" class="logo"/></a> -->
+            <div class="banner">
+                <a href="/">
+                    <img src="/img/banner.png" class="banner">
+                </a>
+            </div>
+                <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu" onclick="$('#content').toggle(); $('#menu').toggle()">
+                <span class="hamb-line"></span>
+            </label>
+        </div>
+        <hr/>
+    </header>
     
     <div class="container my-content">
         <div class="my-content-inside">
-        <div class="row">
-            <div class="col-sm menu">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/news">News</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/people">People</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="/blog">Blog</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="/recruiting">Recruiting</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="/resources">Resources & <br/>&nbsp;References </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm">
+            <div class="row">
+                <div class="col-sm menu">
+                    <div class="nav-container" id="menu">
+                        <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/people">People</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                        <li><a class="nav-link" href="/blog">Blog</a></li>
+                        <li><a class="nav-link" href="/recruiting">Recruiting</a></li>
+                        <li><a class="nav-link" href="/resources">Resources & <br/>&nbsp;References </a></li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- <main> -->
+            <div class="col-sm" id="content">
                     
     <p>If you are interested in joining the MaPLE lab and associated group meetings, please reach out to the lab directly. If you are interested in being advised by me (<a href="https://uvm.edu/%7Eetosch">Emma Tosch</a>) in some capacity, please navigate to the appropriate section and read through the text first:</p>
 <ul>
 <li><a href="https://uvm-maple.github.io/recruiting/#graduate-students">You are a current or soon-to-be graduate student at UVM or elsewhere</a></li>
 <li><a href="https://uvm-maple.github.io/recruiting/#undergraduate-students">You are a current undergraduate student at UVM or elsewhere</a></li>
 </ul>
-<h1 id="graduate-students">Graduate Students</h1>
-<p>&quot;Recruiting&quot; in academia typically refers to the process of taking on PhD students and hiring non-PhD researchers. Recruitment is often tied to grant funding. <em>At present, I am not <em>actively</em> recruiting new graduate students, since all of my grants are fully staffed vis a vis graduate students.</em> If you would like to be advised by me, you may need to start in the TA pool for a bit. </p>
-<p>I am, however, <em>always</em> interested in <strong>working with</strong> motivated and inquisitive students of any background. If you are already a graduate student at UVM and have a specific research project in mind, please feel free to reach out for a meeting. If you are interested in my research perspective more broadly, consider enrolling in one of my courses. If you are interested in the MaPLE lab, reach out to us about attending lab meetings and reading groups. </p>
+<p>I am <em>always</em> interested in <strong>working with</strong> motivated and inquisitive students of any background. If you are already a graduate student at UVM and have a specific research project in mind, please feel free to reach out for a meeting. If you are interested in my research perspective more broadly, consider enrolling in one of my courses. If you are interested in the MaPLE lab, reach out to us about attending lab meetings and reading groups. </p>
 <p>I am always interested in collaborations with graduate students at any institution and if there is a promising research direction that might come out of a collaboration, I will happily write a grant to fund student research. I feel very strongly that students should be paid for their work, but if you need the credits, I can work with you on research for credit. </p>
 <p>If you are generally interested in PhD programs, please be on the lookout for my annual inter-university <a href="https://phd-recruiting.com">PhD recruiting event</a>. I generally take a labor-focused view of research, treating the advisor-advisee relationship as an <em>apprenticeship</em> where I focus on treating research as <em>work</em>. I have an active informal research project on working conditions for graduate students across universities, which includes an ongoing survey of graduate student salaries and benefits:</p>
 <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Now is probably a good time to note that I&#39;m still collecting data for my informal survey of CS[-ish] PhD salaries. If you are a current student, consider filling it out! <a href="https://t.co/501TbPU2sx">https://t.co/501TbPU2sx</a></p>&mdash; Emma Tosch, not a thought leader. (@ToschEmma) <a href="https://twitter.com/ToschEmma/status/1352094659909214212?ref_src=twsrc%5Etfw">January 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>I have paid my graduate student researchers the following rates and try to keep up with inflation. There will always be delays and potential funding gaps, so I encourage my students to communicate early and often about an financial issues before they have the opportunity to interfere with research. Here are my historic rates:</p>
+<p>I have paid my graduate student researchers the following rates and try to keep up with inflation. There will always be delays and potential funding gaps, so I encourage my students to communicate early and often about an financial issues before they have the opportunity to interfere with research. Here are my historic graduate RA rates:</p>
 <ul>
 <li>AY 2021-2022: $30.00/hr</li>
 <li>AY 2022-2023: $32.10/hr </li>
 </ul>
+<h1 id="graduate-students">Graduate Students</h1>
+<p>&quot;Recruiting&quot; in academia typically refers to the process of taking on PhD students and hiring non-PhD researchers. Recruitment is often tied to grant funding.</p>
+<p><strong>I do not actively recruit students I cannot fund and I do not fund students on unlivable wages.</strong> As a general policy I try to avoid any circumstances where students &quot;work for free.&quot; </p>
+<p>Funding typically comes from one of three sources: </p>
+<ol>
+<li><a href="https://uvm-maple.github.io/recruiting/research-assistantships">Research assistantships</a>, </li>
+<li><a href="https://uvm-maple.github.io/recruiting/teaching-assistantships">Teaching assistantships</a>, and</li>
+<li><a href="https://uvm-maple.github.io/recruiting/fellowships">Fellowships</a>.</li>
+</ol>
+<h2 id="research-assistantships">Research Assistantships</h2>
+<p>A research assistantship is typically a 20-hour-per-week appointment, but you should think of it as a &quot;fulltime&quot; appointment when combined with your other academic obligations. Your funding source may come from grants or &quot;soft money.&quot; </p>
+<p>Grants typically have deliverables associated with them. The principal investigator (&quot;PI&quot; — typically your advisor) needs to submit regular reports on the grant. Progress on grant funding influences the PI's ability to get future grants. Ideally your research/dissertation will benefit from the grant you are on, but that may not always be true. </p>
+<p>&quot;Soft money&quot; does not have deliverables associated with it, but it also not renewable. It can come from the university (&quot;start-up funds&quot;) or independent firms (&quot;gifts&quot;).</p>
+<p>👉 <em>At present, I am not actively recruiting new research assistants, since all of my grants are fully staffed vis a vis graduate students.</em> </p>
+<h2 id="teaching-assistantships">Teaching Assistantships</h2>
+<p>A teaching assistantship is typically a cumulative 20-hour-per-week appointment. Teaching assistantships can provide relief from research expectations, especially when available grants have many deliverables (e.g., DARPA grants). Teaching helps develop a deeper understanding of the topics you teach and can reinvigorate your research. </p>
+<p>I recommend <em>against</em> accepting a TAship under the following circumstances:</p>
+<ol>
+<li>Your appointment is split between several classes.<sup class="footnote-reference"><a href="#1">1</a></sup></li>
+<li>You have a high workload as a TA. </li>
+<li>Your pay is substantially lower than an RA's (I would use 2% as a cutoff).<sup class="footnote-reference"><a href="#3">2</a></sup></li>
+</ol>
+<p>If you are willing to be a TA or if you have a fellowship, I <strong>do</strong> have bandwidth to advise new students. I generally advise students to consider TAing very carefully.</p>
+<p>👉  <em>At present, if you would like to be advised by me, you may need to start in the TA pool for a bit.</em></p>
+<h2 id="fellowships">Fellowships</h2>
+<p>Fellowships are funding sources that follow <em>you</em>. You may enter a PhD program with a fellowship, or you may be awarded one during your PhD. Here is an <a href="https://github.com/chinasaokolo/csGraduateFellowships">excellent list of fellowships in CS</a>, maintained by <a href="http://www.cs.cornell.edu/%7Echinasa/">Chinasa T. Okolo</a>. I strongly recommend applying for fellowships early and often.</p>
+<p>👉 <em>I am always willing to advise students who are self-funded, provided we are a research match and your funding is at an appropriate level.</em></p>
 <h1 id="undergraduate-students">Undergraduate Students</h1>
-<p>Undergraduate students who are interested in working with me should email me directly. I am happy to support undergraduate studnets on funded projects via REU funds. Since funded projects are often changing, discussing opportunities synchronously with me is the best course of action. If you would like to do summer research with me from any institution, please reach out and I will find a way to make that happen. </p>
+<p>Undergraduate students who are interested in working with me should email me directly. I am happy to support undergraduate students on funded projects via REU. Since funded projects are often changing, discussing opportunities synchronously with me is the best course of action. If you would like to do summer research with me from any institution, please reach out and I will find a way to make that happen. </p>
 <p>If you are a UVM student with a specific thesis project in mind, I <em>strongly</em> encourage you to take one of my courses first. If you cannot take my courses, I encourage you to attend lab meetings for one semester before your prospective start date. I <em>cannot</em> advise thesis projects outside my expertise. Thesis projects need not be research, but they should be related to a topic I can advise on. This will prevent any mismatches in expectations for both parties. </p>
-
+<hr/>
+<small>
+<p><sup class="footnote-reference"><a href="#1:">3</a></sup> This is common at UVM. UVM uses a formula to assign TA hours to classes. The lower level classes need at least 75 students per fulltime graduate TA and the upper classes need at least  96 students per fulltime graduate TA. Upper-level courses are usually capped around 40 students, so graduate TAs for upper level courses are often split between classes. Graduate unions often set caps for the number of students per TA; UVM graduate students are not unionized.</p>
+<p><sup class="footnote-reference"><a href="#3:">4</a></sup> Most institutions publish <a href="https://www.uvm.edu/graduate/funding_your_graduate_degree">minimum stipends online</a>. Graduate TA stipends at UVM tend to be significantly lower than RA stipends, since (1) TAships are only for 9 months and (2) advisors can choose to pay RAs more. TA stipends are set at the college level at UVM; citizens and permanent residents can work with their advisors to supplement their income, but students on visas cannot.</p>
+</small>
 
             </div>
+            <!-- </main> -->
+
             <div class="col-sm menu">
+                <div class="twitter-timeline">
                 <a class="twitter-timeline"
                    data-link-color="cadetblue"
                    href="https://twitter.com/AppliedPl">
@@ -85,6 +125,7 @@
             </div>
             </div>
             </div>
+        </div>
         </div>
     </div>
     <footer class="footer">Interested in joining us, starting a new collaboration, or giving a talk to our group? Contact us via <a href="mailto:maple-lab@uvm.edu">email</a> or <a href="https://twitter.com/AppliedPl">Twitter</a> direct message!<br/>

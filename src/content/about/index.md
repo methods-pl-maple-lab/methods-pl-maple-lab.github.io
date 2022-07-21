@@ -12,7 +12,12 @@ We have particular focus on the following topics:
 
 The focus of this lab is on applying _formal methods_ and _programming language design_ to programs not ordinarily thought of as code:
 
-<img alt="Slide explaining how we approach solutions in MaPLE" class="image-content" src="/img/MaPLE_SoTL1/MaPLE_SoTL1.001.jpeg"/>
+
+{{ image(alt="Slide explaining how we approach solutions in MaPLE",
+         src="/img/MaPLE_SoTL1/MaPLE_SoTL1.001.jpeg",
+         caption="",
+         class="full") }}
+
 
 <!-- If you are interested in working with us, [contact us](#contact)! -->
 

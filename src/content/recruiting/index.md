@@ -8,11 +8,7 @@ If you are interested in joining the MaPLE lab and associated group meetings, pl
 * [You are a current or soon-to-be graduate student at UVM or elsewhere](#graduate-students)
 * [You are a current undergraduate student at UVM or elsewhere](#undergraduate-students)
 
-# Graduate Students
-
-"Recruiting" in academia typically refers to the process of taking on PhD students and hiring non-PhD researchers. Recruitment is often tied to grant funding. _At present, I am not *actively* recruiting new graduate students, since all of my grants are fully staffed vis a vis graduate students._ If you would like to be advised by me, you may need to start in the TA pool for a bit. 
-
-I am, however, _always_ interested in **working with** motivated and inquisitive students of any background. If you are already a graduate student at UVM and have a specific research project in mind, please feel free to reach out for a meeting. If you are interested in my research perspective more broadly, consider enrolling in one of my courses. If you are interested in the MaPLE lab, reach out to us about attending lab meetings and reading groups. 
+I am _always_ interested in **working with** motivated and inquisitive students of any background. If you are already a graduate student at UVM and have a specific research project in mind, please feel free to reach out for a meeting. If you are interested in my research perspective more broadly, consider enrolling in one of my courses. If you are interested in the MaPLE lab, reach out to us about attending lab meetings and reading groups. 
 
 I am always interested in collaborations with graduate students at any institution and if there is a promising research direction that might come out of a collaboration, I will happily write a grant to fund student research. I feel very strongly that students should be paid for their work, but if you need the credits, I can work with you on research for credit. 
 
@@ -20,13 +16,65 @@ If you are generally interested in PhD programs, please be on the lookout for my
 
 <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Now is probably a good time to note that I&#39;m still collecting data for my informal survey of CS[-ish] PhD salaries. If you are a current student, consider filling it out! <a href="https://t.co/501TbPU2sx">https://t.co/501TbPU2sx</a></p>&mdash; Emma Tosch, not a thought leader. (@ToschEmma) <a href="https://twitter.com/ToschEmma/status/1352094659909214212?ref_src=twsrc%5Etfw">January 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I have paid my graduate student researchers the following rates and try to keep up with inflation. There will always be delays and potential funding gaps, so I encourage my students to communicate early and often about an financial issues before they have the opportunity to interfere with research. Here are my historic rates:
+I have paid my graduate student researchers the following rates and try to keep up with inflation. There will always be delays and potential funding gaps, so I encourage my students to communicate early and often about an financial issues before they have the opportunity to interfere with research. Here are my historic graduate RA rates:
 
 * AY 2021-2022: $30.00/hr
 * AY 2022-2023: $32.10/hr 
 
+
+# Graduate Students
+
+"Recruiting" in academia typically refers to the process of taking on PhD students and hiring non-PhD researchers. Recruitment is often tied to grant funding.  
+
+
+**I do not actively recruit students I cannot fund and I do not fund students on unlivable wages.** As a general policy I try to avoid any circumstances where students "work for free." 
+
+Funding typically comes from one of three sources: 
+
+1. [Research assistantships](research-assistantships), 
+2. [Teaching assistantships](teaching-assistantships), and
+3. [Fellowships](fellowships).
+
+## Research Assistantships
+A research assistantship is typically a 20-hour-per-week appointment, but you should think of it as a "fulltime" appointment when combined with your other academic obligations. Your funding source may come from grants or "soft money." 
+
+Grants typically have deliverables associated with them. The principal investigator ("PI" &mdash; typically your advisor) needs to submit regular reports on the grant. Progress on grant funding influences the PI's ability to get future grants. Ideally your research/dissertation will benefit from the grant you are on, but that may not always be true. 
+
+"Soft money" does not have deliverables associated with it, but it also not renewable. It can come from the university ("start-up funds") or independent firms ("gifts").
+
+&#128073; _At present, I am not actively recruiting new research assistants, since all of my grants are fully staffed vis a vis graduate students._ 
+
+## Teaching Assistantships
+
+A teaching assistantship is typically a cumulative 20-hour-per-week appointment. Teaching assistantships can provide relief from research expectations, especially when available grants have many deliverables (e.g., DARPA grants). Teaching helps develop a deeper understanding of the topics you teach and can reinvigorate your research. 
+
+I recommend _against_ accepting a TAship under the following circumstances:
+
+1. Your appointment is split between several classes.[^1]
+2. You have a high workload as a TA. 
+3. Your pay is substantially lower than an RA's (I would use 2% as a cutoff).[^3]
+
+If you are willing to be a TA or if you have a fellowship, I **do** have bandwidth to advise new students. I generally advise students to consider TAing very carefully.
+
+&#128073;  _At present, if you would like to be advised by me, you may need to start in the TA pool for a bit._
+
+## Fellowships
+
+Fellowships are funding sources that follow _you_. You may enter a PhD program with a fellowship, or you may be awarded one during your PhD. Here is an [excellent list of fellowships in CS](https://github.com/chinasaokolo/csGraduateFellowships), maintained by [Chinasa T. Okolo](http://www.cs.cornell.edu/~chinasa/). I strongly recommend applying for fellowships early and often.
+
+&#128073; _I am always willing to advise students who are self-funded, provided we are a research match and your funding is at an appropriate level._
+
 # Undergraduate Students
 
-Undergraduate students who are interested in working with me should email me directly. I am happy to support undergraduate studnets on funded projects via REU funds. Since funded projects are often changing, discussing opportunities synchronously with me is the best course of action. If you would like to do summer research with me from any institution, please reach out and I will find a way to make that happen. 
+Undergraduate students who are interested in working with me should email me directly. I am happy to support undergraduate students on funded projects via REU. Since funded projects are often changing, discussing opportunities synchronously with me is the best course of action. If you would like to do summer research with me from any institution, please reach out and I will find a way to make that happen. 
 
 If you are a UVM student with a specific thesis project in mind, I _strongly_ encourage you to take one of my courses first. If you cannot take my courses, I encourage you to attend lab meetings for one semester before your prospective start date. I _cannot_ advise thesis projects outside my expertise. Thesis projects need not be research, but they should be related to a topic I can advise on. This will prevent any mismatches in expectations for both parties. 
+
+<hr/>
+<small>
+
+[^1:] This is common at UVM. UVM uses a formula to assign TA hours to classes. The lower level classes need at least 75 students per fulltime graduate TA and the upper classes need at least  96 students per fulltime graduate TA. Upper-level courses are usually capped around 40 students, so graduate TAs for upper level courses are often split between classes. Graduate unions often set caps for the number of students per TA; UVM graduate students are not unionized.   
+
+[^3:] Most institutions publish [minimum stipends online](https://www.uvm.edu/graduate/funding_your_graduate_degree). Graduate TA stipends at UVM tend to be significantly lower than RA stipends, since (1) TAships are only for 9 months and (2) advisors can choose to pay RAs more. TA stipends are set at the college level at UVM; citizens and permanent residents can work with their advisors to supplement their income, but students on visas cannot.  
+
+</small>

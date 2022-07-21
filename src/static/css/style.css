@@ -15,16 +15,183 @@ a {
     color: cadetblue;
 }
 
-.banner {
-    text-align: center;
-    width: 100%;
-    padding-bottom: 2em;
+.person > a {
+    color: green;
 }
 
-.banner > img {
-    max-height: 160px;
-    width:auto;
+.event > a {
+    color: coral;
 }
+
+.group > a {
+    color: burlywood;
+}
+
+.pub > a {
+    color:crimson;
+}
+
+.twitter-tweet {
+    background-color:aliceblue;
+    border-radius: 10px;
+    border-style: solid;
+    border-color:cadetblue;
+    padding: 5px 5px 5px 5px;
+}
+
+/* device-dependent stuff */
+
+header {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.banner {
+    max-height: 80px;
+    max-width: 75%;
+    float:left;
+    /* background-color: blueviolet; */
+}
+
+.nav-container {
+    /* background-color: white;
+    width: 100vh;
+    height: 100vh;
+    margin-left: -20px; */
+    /* margin-top: -180px; */
+    /* padding-top: 20px; */
+    /* visibility: collapse; */
+    display: none;
+}
+
+.nav {
+    padding-top: 10px;
+    position:fixed;
+    overflow: hidden;
+}
+
+.menu a{
+    margin-left: 25px;
+}
+
+
+/* Menu Icon */
+.hamb {
+    max-height: 80px;
+    padding-top: 25px;
+    max-width: 25%;
+    /* width: 25%; */
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px; 
+    /* background-color: blue; */
+}/* Style label tag */
+
+.hamb-line {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    float: right;
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} 
+/* Hide checkbox */
+
+/* Toggle menu icon */
+input.side-menu:checked ~ div.nav-container {
+    visibility: visible;
+    display: contents;
+    background-color: white;
+    width: 100vh;
+    height: 100vh;
+    margin-left: -20px;
+}
+
+input.side-menu:checked .row > #content {
+    display: none;
+}
+
+input.side-menu:checked ~ content {
+    display: none;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+} 
+
+/* Don't display Twitter timeline on mobile */
+
+.twitter-timeline {
+    visibility: hidden;
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .banner {
+        text-align: center;
+        max-height: 140px;
+        max-width: 100%;
+        float:none;
+    }
+    .logo {
+        visibility:hidden ;
+    }
+    .side-menu {
+        visibility: hidden;
+    }
+    .nav-container {
+        /* background-color: white;
+        width: fit-content;
+        height: fit-content; */
+        visibility: visible;
+        display: contents;
+    }    
+    .nav {
+        background-color: white;
+        border-style: none;
+    }
+    .nav-container hr { 
+        visibility: hidden;
+    }
+    .hamb {
+        display: none;
+    }
+
+    .twitter-timeline {
+        display: contents;
+    }
+}    
+
 
 .menu {
     max-width : 20%;
@@ -42,21 +209,6 @@ a {
     margin-bottom: 50px;
 }
 
-.person > a {
-    color: green;
-}
-
-.event > a {
-    color: coral;
-}
-
-.group > a {
-    color: burlywood;
-}
-
-.pub > a {
-    color:crimson;
-}
 
 li { 
     margin-bottom: 2px;
@@ -165,6 +317,34 @@ img.headshot {
     visibility: hidden;
 }
 
-img.post {
+.full {
     width: 80%;
 }
+
+.div-full {
+    float:none;
+    width:100%;
+}
+
+.inlineleft {
+    width: 40%;
+    margin-right: 5px;
+    float:left;
+}
+
+.inlineright {
+    width: 100%;
+    margin-left: 5px;
+    float:right;
+}
+
+.div-inlineright {
+    float:right;
+    width:40%;
+}
+
+/* .div-inlineright ~ p {
+    float:left; 
+    width: 100%;
+    margin-top: -10px;
+} */
