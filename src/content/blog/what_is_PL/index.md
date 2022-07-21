@@ -45,7 +45,7 @@ One perspective on the evolution of PL that I like is the treatment of languages
 
 We enforce invariants through language design choices, such as prohibiting certain operations (e.g., recursion), making certain constructs atomic (e.g., parallel operators), and equipping programs with complementary systems that encode "extra" information beyond what's necessary to execute the program (e.g., types). 
 
-"Extra-linguistic" mechanisms refers to "stuff" that isn't ordinarily part of a language, but you nevertheless need to be able to reason about programs. In this lab, we often work in contexts where the end result is some kind of statistical analysis. Those analyses are often only valid (in theory, if not in practice!) if certain assumptions about data generating process are trues. 
+"Extra-linguistic" mechanisms refers to "stuff" that isn't ordinarily part of a language, but you nevertheless need to be able to reason about programs. In this lab, we often work in contexts where the end result is some kind of statistical analysis. Those analyses are often only valid (in theory, if not in practice!) if certain assumptions about data generating process are true. 
 
 Now, statisticians have devised incredibly clever ways to make up for violations to these assumptions. In this lab, we don't strive to devise new corrections; instead, we try to understand existing problems via assumptions and corrections, and then design systems (such as programming languages, libraries, and frameworks) to either prevent the assumptions from being broken or make diagnosis easier. In that way, we use PL principles to push diagnostics earlier, making it so that we fail faster (a good thing because we don't waste resources!). 
 
