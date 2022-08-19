@@ -3,10 +3,11 @@
 {% block logo %}{% endblock %}
 
 {% block content %}
-<h5 class="title">
+
+<h1 class="title">
   {{ page.title }}
-</h5>
-{% if page.extra.subtitle %}<h6><i>{{ page.extra.subtitle }}</i></h6>{% endif %}
+</h1>
+{% if page.extra.subtitle %}<h3><i>{{ page.extra.subtitle }}</i></h3>{% endif %}
 <p class="subtitle">
   <strong>{{ page.date }}</strong>
   {% set_global authors = page.extra.authors %}
@@ -15,13 +16,48 @@
       {% for person in section.pages %} 
           {% if person.slug == author %}
               &nbsp;&middot;&nbsp;
-              <a href="{{ person.extra.website }}">{{person.extra.name}}</a>
+              <a href="{{ person.extra.website }}">{{person.extra.name_other}} {{person.extra.name_index}}</a>
           {% endif %}
       {% endfor %}
   {% endfor %}
 </p>
+<div class="blog">
 <div class="post">
   {{ page.content | safe }}
+</div>
+<hr/>
+<div style="text-align:center; width:100%;">
+  <b>Cite this blog post!</b><br/>
+  <div style="text-align:left; width:fit-content; height:fit-content;">
+  <pre id="bib">
+@misc{maple_{{page.date}}, 
+      title={ {%- if true -%}{ {%- if true -%} {{ page.title }} {%- endif -%}} {%- endif -%}}, 
+      journal={ {%- if true -%}{MaPLE Lab Blog}{%- endif -%}}, 
+      publisher={ {%- if true -%}{Github Pages}{%- endif -%}}, 
+      author={ {%- if true -%} { {%- if true -%}
+      {%- set_global authors = page.extra.authors -%}
+      {%- set section = get_section(path="people/_index.md") -%}
+      {%- set_global multi = false -%}
+      {%- for author in authors -%}
+          {%- for person in section.pages -%} 
+              {%- if person.slug == author -%}
+              {%- if multi %} and {% endif -%}{{person.extra.name_index}}, {{person.extra.name_other}} 
+              {%- set_global multi = true -%}
+              {%- endif -%}
+          {%- endfor -%}
+      {%- endfor -%}    
+      {%- endif -%} }
+      {%- endif -%} },
+      year={ {%- if true -%} {{ page.date | date(format="%Y")  }} {%- endif -%}}, 
+      month={ {%- if true -%} {{ page.date | date(format="%B")  }} {%- endif -%}}, 
+      day={ {%- if true -%} {{ page.date | date(format="%d")  }} {%- endif -%}}
+    }   
+  </pre></div>
+  <div><button type="button" 
+               class="btn btn-primary btn-sm" 
+               style="float:right; margin-top:-25px;"
+               onclick="console.log($('#bib').select()); navigator.clipboard.writeText($('#bib').select().value)">
+               Copy</button></div>
 </div>
 
 <div class="paginator">
@@ -41,5 +77,5 @@
   {% endif %}
   <hr/>
 </div>
-
+</div>
 {% endblock content %}

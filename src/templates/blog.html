@@ -5,8 +5,8 @@
     {% for page in paginator.pages %}
         <article>
         <div class="post">
-            <h5>{{ page.title }}</h5>
-            {% if page.extra.subtitle %}<h6><i>{{ page.extra.subtitle }}</i></h6>{% endif %}
+            <h1>{{ page.title }}</h1>
+            {% if page.extra.subtitle %}<h3><i>{{ page.extra.subtitle }}</i></h3>{% endif %}
             <strong>{{ page.date }}</strong>
             {% set_global authors = page.extra.authors %}
             {% set section = get_section(path="people/_index.md") %}
@@ -14,7 +14,7 @@
                 {% for person in section.pages %} 
                     {% if person.slug == author %}
                         &nbsp;&middot;&nbsp;
-                        <a href="{{ person.extra.website }}">{{person.extra.name}}</a>
+                        <a href="{{ person.extra.website }}">{{person.extra.name_other}} {{ person.extra.name_index }}</a>
                     {% endif %}
                 {% endfor %}
             {% endfor %}

@@ -1,6 +1,7 @@
 +++
 [extra]
-name = "Ivoline (Ivy) Ngong"
+name_other = "Ivoline" 
+name_index = "Ngong"
 lab = "PLAID"
 lab_url = "https://plaid.w3.uvm.edu/"
 role = "member"

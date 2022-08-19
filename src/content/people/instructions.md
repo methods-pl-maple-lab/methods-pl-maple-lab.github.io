@@ -1,6 +1,7 @@
 +++
 [extra]
-name = "Your name here"
+name_index = "The name used to look up/index you. Typically your family name/last name."
+name_other = "All other names."
 lab = "Your primary lab affiliation"
 lab_url = "A link to your primary lab"
 role = "The lab role. Pick one of: faculty, member, collaborator"

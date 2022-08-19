@@ -1,6 +1,7 @@
 +++
 [extra]
-name = "Ratang Sedimo"
+name_other = "Ratang"
+name_index = "Sedimo"
 lab = "MaPLE"
 lab_url = "https://uvm-maple.github.io/"
 role = "member"

@@ -14,7 +14,7 @@
             <table>
             <tr><td><a href="{{ person.extra.website }}" class="headshot"><img src="{{ config.base_url }}/people/{{ person.slug }}/headshot.jpg" class="headshot"/></a>
                 </td>
-                <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name }}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span> ({{person.extra.title}})<br/>
+                <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name_other }} {{ person.extra.name_index }}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span> ({{person.extra.title}})<br/>
                     {{ person.extra.institution1 }}<br/>
                     {% if person.extra.institution2 %} 
                     <small>{{ person.extra.institution2 }}</small>
@@ -50,7 +50,7 @@
                                                                                onerror="this.onerror=null; this.src='/img/trike.png'"
                                                                                /></a>
                     </td>
-                    <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name }}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span>
+                    <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name_other }} {{ person.extra.name_index }}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span>
                         {% if person.extra.title %}({{person.extra.title}}){% endif %}<br/>
                         {{ person.extra.institution1 }}<br/>
                         {% if person.extra.institution2 %} 
@@ -95,7 +95,7 @@
                                                                                onerror="this.onerror=null; this.src='/img/trike.png'"
                                                                                /></a>
                     </td>
-                    <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name }}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span><br/>
+                    <td><span class="person"><a href="{{ person.extra.website }}">{{ person.extra.name_other }} {{person.extra.name_index}}</a></span>, <span class="group"><a href="{{ person.extra.lab_url }}">{{ person.extra.lab }}</a></span><br/>
                         {{ person.extra.institution1 }}<br/>
                         {% if person.extra.institution2 %} 
                         <small>{{ person.extra.institution2 }}</small>

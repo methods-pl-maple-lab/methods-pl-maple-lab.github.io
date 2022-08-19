@@ -4,8 +4,97 @@
 	<link href="https://uvm-maple.github.io/blog/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://uvm-maple.github.io/blog/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-20T00:00:00+00:00</updated>
+	<updated>2022-08-18T00:00:00+00:00</updated>
 	<id>https://uvm-maple.github.io/blog/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Non-cooperation in experiments</title>
+		<published>2022-08-18T00:00:00+00:00</published>
+		<updated>2022-08-18T00:00:00+00:00</updated>
+		<link href="https://uvm-maple.github.io/blog/usenix-security-1/" type="text/html"/>
+		<id>https://uvm-maple.github.io/blog/usenix-security-1/</id>
+		<content type="html">&lt;p&gt;Last week, &lt;a href=&quot;https:&#x2F;&#x2F;cs.umass.edu&#x2F;%7Ekclary&quot;&gt;Kaleigh Clary&lt;&#x2F;a&gt; presented her work, &lt;a href=&quot;https:&#x2F;&#x2F;www.usenix.org&#x2F;system&#x2F;files&#x2F;sec22summer_clary.pdf&quot;&gt;Stick it to the Man: Correcting for Non-Cooperative Behavior of Subjects in Experiments on Social Networks&lt;&#x2F;a&gt; at &lt;a href=&quot;https:&#x2F;&#x2F;www.usenix.org&#x2F;conference&#x2F;usenixsecurity22&quot;&gt;USENIX Security&lt;&#x2F;a&gt;. One of the things I really like about this work is the focus on analysis and implications of non-cooporative actors in network experiments from a PL&#x2F;systems perspective. &lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;div style=&quot;text-align:center; font-size:small;&quot; class=&quot;div-full&quot;&gt;
+    &lt;img src=&quot;IMG_0856.jpg&quot; 
+         alt=&quot;Kaleigh Clary presenting her work. Slide depicts the scenario as a causal model, where non-cooperative behavior is defined as the case where participants behave differently when they believe they are being surveilled.&quot;
+         class=&quot;full&quot;
+         style=&quot;border-radius: 10px;&quot;
+         &#x2F;&gt;
+&lt;div style=&quot;margin:10pt; padding:10pt; text-align: justified;&quot;&gt;
+    Kaleigh Clary presenting her work.
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;h1 id=&quot;the-problem-this-work-addresses&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-problem-this-work-addresses&quot; aria-label=&quot;Anchor link for: the-problem-this-work-addresses&quot;&gt;🔗&lt;&#x2F;a&gt;The problem this work addresses&lt;&#x2F;h1&gt;
+&lt;div style=&quot;text-align:center; font-size:small;&quot; class=&quot;div-inlineright&quot;&gt;
+    &lt;img src=&quot;craigslist.png&quot; 
+         alt=&quot;An ad from Craigslist seeking participants in a study on the effects of whole bean coffee consumption.&quot;
+         class=&quot;inlineright&quot;
+         style=&quot;border-radius: 10px;&quot;
+         &#x2F;&gt;
+&lt;div style=&quot;margin:10pt; padding:10pt; text-align: justified;&quot;&gt;
+    An example ad for research participants.
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;One of the core contributions of this paper is a statistical correction for adversarial behavior with respect to experimentation in a networked (e.g., social media) environment. To see why corrections are both necessary and non-trivial, let&#x27;s first consider the more typical view of experimentation. Suppose you participate in psychological and market research studies you find on Craigslist for cash. You are certain that you are in an &amp;quot;experiment&amp;quot; of some kind upon starting the study and that your actions are being observed and will be analyzed; none of this should be surprising.&lt;&#x2F;p&gt;
+&lt;!-- &lt;div style=&quot;text-align:center; font-size:small;&quot; class=&quot;div-inlineleft&quot;&gt;
+    &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;openclipart.org&amp;#x2F;image&amp;#x2F;800px&amp;#x2F;297180&quot; 
+         alt=&quot;Cartoon sleeping student.&quot;
+         class=&quot;inlineleft&quot;
+         style=&quot;border-radius: 10px;&quot;
+         &#x2F;&gt;
+&lt;div style=&quot;margin:10pt; padding:10pt; text-align: justified;&quot;&gt;
+    
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt; --&gt;
+&lt;p&gt;Now, there may be some circumstances under which you do not participate in good faith. Maybe you disagree with the motivation behind the study. Maybe upon arrival you realize the experimenters are asking more from you than you&#x27;re willing to give but it&#x27;s not enough to quit and lose the cash. Maybe you&#x27;ve done a lot of these experiments and think it would be fun to mess the researchers. Maybe there are reasons only known to you. No matter what the reason, you decide to do something different, e.g., act randomly, lie, give the opposite answer from what you think they want. &lt;&#x2F;p&gt;
+&lt;p&gt;In an experiment or study of a sufficient size, we would not expect such non-cooperative behavior to have a significant effect, &lt;em&gt;so long as each actor behaves independently&lt;&#x2F;em&gt;. The idea is that each individual&#x27;s non-cooperative behavior will be distributed &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Independent_and_identically_distributed_random_variables&quot;&gt;iid&lt;&#x2F;a&gt; throughout the population, making that behavior tantamount to noise. &lt;&#x2F;p&gt;
+&lt;p&gt;Of course, the iid assumption is a rather strong one. There are two major cases where this could be a problem:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;When participants &lt;em&gt;coordinate&lt;&#x2F;em&gt; their behavior and &lt;&#x2F;li&gt;
+&lt;li&gt;When a single non-cooporative participant&#x27;s behavior influences unsuspecting participants be revealing information about their treatment or their response. &lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The former is the traditional purview of a security conference; its statistical correction involves removing those participants from the population. This is a bummer, since it affects statistical power, but ultimately &lt;em&gt;post-hoc&lt;&#x2F;em&gt; detection isn&#x27;t so bad. &lt;&#x2F;p&gt;
+&lt;p&gt;The latter is what Kaleigh&#x27;s work is about. In the former case, once we classify and remove a non-cooporative participants from the sample, we&#x27;re done. However, in the latter case, there is a kind of leakage to unsuspecting participants due to the experimental design — Kaleigh has talked about this as a kind of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Sybil_attack&quot;&gt;Sybil attack&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;So what about the experimental design causes this leakage? Well, often in experiments in a networked setting one cannot simply assign individuals to experimental conditions at random due to the fact that participants interact with each other, violating what&#x27;s known as &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Rubin_causal_model#Stable_unit_treatment_value_assumption_(SUTVA)&quot;&gt;SUTVA&lt;&#x2F;a&gt; (but what the casual, non-causal computer science reader can think of as a kind of interference). The idea is that participants may be clustered into strongly connected communities such that random assignment of experimental treatment to individuals in those communities won&#x27;t work — due to the connectedness, some participants may actually be exposed to both their own experimental treatment and someone else&#x27;s! Under such a circumstance, we would need to throw out this data, since we cannot separate the effect of one condition versus another.&lt;&#x2F;p&gt;
+&lt;p&gt;To address this issue, researchers use what&#x27;s called &lt;em&gt;cluster random assignment&lt;&#x2F;em&gt; where, instead of assigning experimental conditions at random for each individual, they assign experimental conditions at random for each community (i.e., everyone in the same community gets the same assignment). This is great because it increases power. This is not so great because it makes such designs more vulnerable to adversarial or non-cooporative behavior — a participant with high connectivity within the community cluster can have outsized influence on the quality of the data collected. &lt;&#x2F;p&gt;
+&lt;p&gt;Kaleigh&#x27;s work developed a statistical correction for this bias, but it also showed how vulnerable communities are to well-connected non-cooporative actors. In fact, it takes surprisingly few non-cooperating nodes having the right network placement (i.e., connectivity) to render an experiment essentially useless. &lt;&#x2F;p&gt;
+&lt;h1 id=&quot;implications-for-pl-researchers&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#implications-for-pl-researchers&quot; aria-label=&quot;Anchor link for: implications-for-pl-researchers&quot;&gt;🔗&lt;&#x2F;a&gt;Implications for PL researchers&lt;&#x2F;h1&gt;
+&lt;p&gt;Online social networks are important platforms not only for social science researchers, but also for systems researchers broadly, including folks interested in PL. Platforms don&#x27;t just enable socialization, but also the exchange of ideas, goods, and services — i.e., resources. They are increasingly being seen as &lt;em&gt;execution environments&lt;&#x2F;em&gt; where high-stakes automated transactions happen.&lt;&#x2F;p&gt;
+&lt;p&gt;The future of these platforms is one where policies that govern human behavior may be generated programmatically. Interpretable DSLs for platform policies are one way we might do this responsibly and experimentation will be critical for the development and automation of such policies. Thus understanding threat models to experimentation is of paramount importance. &lt;&#x2F;p&gt;
+&lt;p&gt;Kaleigh&#x27;s work addresses the vulnerability of a particular &lt;em&gt;experimental design&lt;&#x2F;em&gt; to attack. An &lt;em&gt;experimental design&lt;&#x2F;em&gt; is a particular procedure or policy for assigning treatment to experiment participants and is often associated with a family of estimators for an outcome of interest. What I find fascinating about Kaleigh&#x27;s work is how it illustrates the tradeoff between a design that increased power by reducing variability, but came at a cost vis a vis its vulnerability to attack. &lt;&#x2F;p&gt;
+&lt;!-- Tradeoffs of being light on our feet while also realizing that the speed of communication may be partly responsible for eroding the quality of interaction. (cite thing I went to -- Nate Matias&#x27; thing)
+
+People may be behave differently under observation or when they _believe_ they are being observed. We cannot  --&gt;
+&lt;!-- &lt;div style=&quot;text-align:center; font-size:small;&quot; class=&quot;div-&quot;&gt;
+    &lt;img src=&quot;information_asymmetry.gif&quot; 
+         alt=&quot;&quot;
+         class=&quot;&quot;
+         style=&quot;border-radius: 10px;&quot;
+         &#x2F;&gt;
+&lt;div style=&quot;margin:10pt; padding:10pt; text-align: justified;&quot;&gt;
+    
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt; --&gt;
+&lt;h1 id=&quot;ethics&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ethics&quot; aria-label=&quot;Anchor link for: ethics&quot;&gt;🔗&lt;&#x2F;a&gt;Ethics&lt;&#x2F;h1&gt;
+&lt;p&gt;One line of inquiry that came up repeatedly during the conference were questions from security researchers about protecting vulnerable populations. There was an implicit question about why we should help platforms like Facebook collect data on users. Our position is twofold: (1) the alternative to experimentation is policy by fiat, which is probably not so good, and (2) experimentation is a method and should be thought of as a separate concern from data collection, privacy, and transparency. What platforms do with experimental data is a different question from how they experiment. &lt;&#x2F;p&gt;
+&lt;p&gt;A major unspoken concern is folks&#x27; discomfort with deception. Unfortunately for end-users, many experimental questions rely on deception — or at least asymmetry in information. &lt;&#x2F;p&gt;
+&lt;video width=&quot;100%&quot; controls&gt;
+    &lt;source src=&quot;information_asymmetry.m4v&quot; type=&quot;video&#x2F;mp4&quot;&gt;
+&lt;&#x2F;video&gt;
+&lt;p&gt;Our position is that there are better ways to build trust with end-users and obtained informed consent to participate in experimentation — this is a platform-level policy issue, not one that can be solved via statistical correction. To that end, I look forward to relaying what &lt;a href=&quot;https:&#x2F;&#x2F;uvm-maple.github.io&#x2F;blog&#x2F;usenix-security-1&#x2F;#&quot;&gt;Erin McBride&lt;&#x2F;a&gt; has been working on this summer in a future blog post!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;future-posts-on-this-topic&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#future-posts-on-this-topic&quot; aria-label=&quot;Anchor link for: future-posts-on-this-topic&quot;&gt;🔗&lt;&#x2F;a&gt;Future posts on this topic&lt;&#x2F;h1&gt;
+&lt;p&gt;Here are some forward links to future blog posts on this topic. Feel free to tag &lt;code&gt;@AppliedPL&lt;&#x2F;code&gt; on Twitter if you would like to see one of these sooner rather than later!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;uvm-maple.github.io&#x2F;blog&#x2F;usenix-security-1&#x2F;#&quot;&gt;Story of this paper&#x27;s genesis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;uvm-maple.github.io&#x2F;blog&#x2F;usenix-security-1&#x2F;#&quot;&gt;Breakdown of the estimators&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;uvm-maple.github.io&#x2F;blog&#x2F;usenix-security-1&#x2F;#&quot;&gt;Web demonstration of the analysis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;uvm-maple.github.io&#x2F;blog&#x2F;usenix-security-1&#x2F;#&quot;&gt;Relationship to related work published recently&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;span class=&quot;tweet&quot; hidden&gt;
+&lt;!-- Need to keep a database that matches blog posts to tweet hashes. Use this to select out the tweet to reply to. --&gt;
+&lt;!-- Also want to have a check that the tweet is 180chars-length of blog post url (which probably means we want something that compresses the url to a fixed length) --&gt;
+&lt;span&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Answering the important questions</title>
 		<published>2022-07-20T00:00:00+00:00</published>

@@ -1,6 +1,7 @@
 +++
 [extra]
-name = "Emma Tosch"
+name_other = "Emma"
+name_index = "Tosch"
 lab = "MaPLE"
 lab_url = "https://uvm-maple-lab.github.io"
 role = "faculty"

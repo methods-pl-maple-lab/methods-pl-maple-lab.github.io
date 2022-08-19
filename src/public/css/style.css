@@ -279,6 +279,7 @@ img.headshot {
     color: aliceblue;
     padding-top: 10px;
     padding-bottom: 50px;
+    z-index: 10000;
 }
 
 .footer > a {
@@ -327,14 +328,19 @@ img.headshot {
 }
 
 .inlineleft {
+    padding-right: 10px;
+    float:left;
+    width: 100%;
+}
+
+.div-inlineleft {
     width: 40%;
-    margin-right: 5px;
     float:left;
 }
 
 .inlineright {
     width: 100%;
-    margin-left: 5px;
+    padding-left: 7px;
     float:right;
 }
 
@@ -343,8 +349,14 @@ img.headshot {
     width:40%;
 }
 
-/* .div-inlineright ~ p {
-    float:left; 
-    width: 100%;
-    margin-top: -10px;
-} */
+.blog h1 {
+    font-size: 22pt;
+}
+
+.blog h2 {
+    font-size: 18pt;
+}
+
+.blog h3, h4, h5, h6 {
+    font-size: 14pt;
+}

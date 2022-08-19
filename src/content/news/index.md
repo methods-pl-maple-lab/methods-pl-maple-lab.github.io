@@ -2,6 +2,7 @@
 template = "page.html"
 +++
 
+* *August 2022* <span class="person">[Kaleigh Clary](https://people.cs.umass.edu/~kclary/)</span> [presented](blog) joint work with <span class="person">[Prof. Tosch](https://uvm.edu/~etosch)'s</span> at <span class="event">[USENIX Security](https://www.usenix.org/conference/usenixsecurity22/technical-sessions#node-281650)</span> in Boston. 
 * *June 2022* [Formal Methods in Software Support for Sound Experimentation](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2220422&HistoricalAwards=false) funded by the NSF!
 * *June 2022* MaPLE/<span class="group">[PLAID](https://plaid.w3.uvm.edu)<span> student <span class="person">[Mako Bates](https://uvm.edu/~mpbates)</span> attends <span class="event">[OPLSS 2022](https://www.cs.uoregon.edu/research/summerschool/summer22/)</span>.
 * *June 2022* MaPLE PhD student <span class="person">[Ratang Sedimo](https://uvm.edu/~rsedimo)<span> attends <span class="event">[PLMW](https://pldi22.sigplan.org/track/PLMW-PLDI-2022)@[PLDI2022](https://pldi22.sigplan.org)<span>.

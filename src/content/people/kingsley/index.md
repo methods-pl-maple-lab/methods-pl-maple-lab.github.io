@@ -1,6 +1,7 @@
 +++
 [extra]
-name = "Sara Kingsley"
+name_other = "Sara"
+name_index = "Kingsley"
 lab = ""
 lab_url = ""
 role = "collaborator"
